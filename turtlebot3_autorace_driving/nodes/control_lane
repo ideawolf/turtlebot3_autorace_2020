@@ -44,7 +44,7 @@ class ControlLane():
         error = center - 500
 
         Kp = 0.0025
-        Kd = 0.005
+        Kd = 0.007
 
         angular_z = Kp * error + Kd * (error - self.lastError)
         self.lastError = error
