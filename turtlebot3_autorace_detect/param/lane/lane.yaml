@@ -2,7 +2,7 @@
 detect:
   lane:
     white:
-      hue_l: 0
+      hue_l: 50
       hue_h: 179
       saturation_l: 0
       saturation_h: 30
