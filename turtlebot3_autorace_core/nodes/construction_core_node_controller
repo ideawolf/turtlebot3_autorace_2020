@@ -25,7 +25,8 @@ import os
 import sys
 from enum import Enum
 from std_msgs.msg import UInt8, Float64
- 
+from turtlebot3_autorace_msgs.msg import MovingParam
+
 class CoreNodeController():
     def __init__(self):
         self.ros_package_path = os.path.dirname(os.path.realpath(__file__))
@@ -38,6 +39,10 @@ class CoreNodeController():
         # publishes orders
         self.pub_construction_order = rospy.Publisher('/detect/construction_order', UInt8, queue_size=1)
         self.pub_mode_return = rospy.Publisher('/core/returned_mode', UInt8, queue_size=1)
+
+        # Publishes Move forward
+        self.pub_moving = rospy.Publisher('/control/moving/state', MovingParam, queue_size= 1)
+
 
         self.CurrentMode = Enum('CurrentMode', 'idle lane_following construction')
         self.current_mode = self.CurrentMode.idle.value
@@ -86,7 +91,7 @@ class CoreNodeController():
         # lane_following
         if self.current_mode == self.CurrentMode.lane_following.value:
             rospy.loginfo("Current step : searching construction sign")
-            rospy.loginfo("Go to next step : construction")
+            rospy   .loginfo("Go to next step : construction")
 
             self.fnLaunch(self.Launcher.launch_camera_ex_calib.value, True)
 
