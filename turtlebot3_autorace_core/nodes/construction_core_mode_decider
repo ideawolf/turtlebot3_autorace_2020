@@ -33,7 +33,7 @@ class CoreModeDecider():
 
         # publishes : decided mode
         self.pub_decided_mode = rospy.Publisher('/core/decided_mode', UInt8, queue_size=1)
-        
+
         self.pub_moving = rospy.Publisher('/control/moving/state', MovingParam, queue_size= 1)
         self.pub_max_vel = rospy.Publisher('/control/max_vel', Float64, queue_size = 1)
 
@@ -60,6 +60,7 @@ class CoreModeDecider():
         msg_pub_max_vel.data = 0.00
         self.pub_max_vel.publish(msg_pub_max_vel)
 
+        rospy.sleep(1)
 
         self.is_moving_complete = False
 
