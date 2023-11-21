@@ -11,7 +11,7 @@ detect:
     yellow:
       hue_l: 0
       hue_h: 127
-      saturation_l: 70
+      saturation_l: 38
       saturation_h: 255
       lightness_l: 192
       lightness_h: 255
