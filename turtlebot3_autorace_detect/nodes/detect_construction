@@ -46,6 +46,10 @@ class DetectContruction():
         self.is_moving_complete = True
 
     def cbConstructionOrder(self, order):
+
+        ### 원복 해야됨
+        order.data = self.StepOfConstruction.avoid_obstacle.value
+
         msg_pub_construction_return = UInt8()
 
         if order.data == self.StepOfConstruction.find_obstacle.value:
