@@ -22,7 +22,7 @@
 import rospy
 import numpy as np
 from enum import Enum
-from std_msgs.msg import UInt8
+from std_msgs.msg import UInt8, Float64
 from turtlebot3_autorace_msgs.msg import MovingParam
 
 class CoreModeDecider():
@@ -33,7 +33,9 @@ class CoreModeDecider():
 
         # publishes : decided mode
         self.pub_decided_mode = rospy.Publisher('/core/decided_mode', UInt8, queue_size=1)
+        
         self.pub_moving = rospy.Publisher('/control/moving/state', MovingParam, queue_size= 1)
+        self.pub_max_vel = rospy.Publisher('/control/max_vel', Float64, queue_size = 1)
 
         self.InvokedObject = Enum('InvokedObject', 'traffic_sign')
         self.TrafficSign = Enum('TrafficSign', 'construction')
@@ -53,6 +55,12 @@ class CoreModeDecider():
 
     def fnInitMode(self):                                                   # starts only when the program is started initially or any mission is completed
         ## 원복 해야됨
+
+        msg_pub_max_vel = Float64()
+        msg_pub_max_vel.data = 0.00
+        self.pub_max_vel.publish(msg_pub_max_vel)
+
+
         self.is_moving_complete = False
 
         rospy.loginfo("currentmode : construction detected")
