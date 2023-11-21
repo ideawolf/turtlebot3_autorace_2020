@@ -60,6 +60,7 @@ class CoreNodeController():
         self.launch_control_lane_launched = False       
         self.launch_control_moving_launched = False
 
+        # 원복
         self.is_triggered = False
 
         loop_rate = rospy.Rate(10) # 10hz
