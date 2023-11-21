@@ -93,7 +93,7 @@ class CoreNodeController():
             rospy.loginfo("Current step : searching construction sign")
             rospy   .loginfo("Go to next step : construction")
 
-            self.fnLaunch(self.Launcher.launch_camera_ex_calib.value, True)
+#             self.fnLaunch(self.Launcher.launch_camera_ex_calib.value, True)
 
             # self.fnLaunch(self.Launcher.launch_detect_lane.value, True)
             self.fnLaunch(self.Launcher.launch_detect_sign.value, True)
@@ -113,7 +113,7 @@ class CoreNodeController():
 
                 msg_pub_construction_order.data = self.StepOfConstruction.find_obstacle.value
 
-                self.fnLaunch(self.Launcher.launch_camera_ex_calib.value, True)
+    #             self.fnLaunch(self.Launcher.launch_camera_ex_calib.value, True)
 
                 # self.fnLaunch(self.Launcher.launch_detect_lane.value, True)
                 self.fnLaunch(self.Launcher.launch_detect_sign.value, False)
@@ -128,7 +128,7 @@ class CoreNodeController():
 
                 msg_pub_construction_order.data = self.StepOfConstruction.avoid_obstacle.value
 
-                self.fnLaunch(self.Launcher.launch_camera_ex_calib.value, True)
+    #             self.fnLaunch(self.Launcher.launch_camera_ex_calib.value, True)
 
                 # self.fnLaunch(self.Launcher.launch_detect_lane.value, True)
                 self.fnLaunch(self.Launcher.launch_detect_sign.value, False)
@@ -142,7 +142,7 @@ class CoreNodeController():
 
                 msg_pub_construction_order.data = self.StepOfConstruction.exit.value
 
-                self.fnLaunch(self.Launcher.launch_camera_ex_calib.value, True)
+    #             self.fnLaunch(self.Launcher.launch_camera_ex_calib.value, True)
 
                 # self.fnLaunch(self.Launcher.launch_detect_lane.value, True)
                 self.fnLaunch(self.Launcher.launch_detect_sign.value, True)
