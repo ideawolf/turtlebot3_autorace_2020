@@ -89,6 +89,7 @@ class CoreNodeController():
 
     def fnControlNode(self):
         ### 원복해야됨 ##
+        rospy.loginfo("Current step : Skip to 하드코딩")
         msg_pub_construction_order = UInt8()
         msg_pub_construction_order.data = self.StepOfConstruction.avoid_obstacle.value
         self.pub_construction_order.publish(msg_pub_construction_order)
