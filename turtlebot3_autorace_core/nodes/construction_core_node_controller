@@ -61,7 +61,7 @@ class CoreNodeController():
         self.launch_control_moving_launched = False
 
         # 원복
-        self.is_triggered = False
+        self.is_triggered = True
 
         loop_rate = rospy.Rate(10) # 10hz
         while not rospy.is_shutdown():
