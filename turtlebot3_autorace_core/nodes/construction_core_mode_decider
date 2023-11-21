@@ -55,7 +55,7 @@ class CoreModeDecider():
 
     def fnInitMode(self):                                                   # starts only when the program is started initially or any mission is completed
         ## 원복 해야됨
-
+        ## 이부분 인자 수정    
         msg_pub_max_vel = Float64()
         msg_pub_max_vel.data = 0.00
         self.pub_max_vel.publish(msg_pub_max_vel)
