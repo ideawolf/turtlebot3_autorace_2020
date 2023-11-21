@@ -95,7 +95,7 @@ class CoreNodeController():
 
             self.fnLaunch(self.Launcher.launch_camera_ex_calib.value, True)
 
-            self.fnLaunch(self.Launcher.launch_detect_lane.value, True)
+            # self.fnLaunch(self.Launcher.launch_detect_lane.value, True)
             self.fnLaunch(self.Launcher.launch_detect_sign.value, True)
             self.fnLaunch(self.Launcher.launch_detect_construction.value, False)
 
@@ -115,7 +115,7 @@ class CoreNodeController():
 
                 self.fnLaunch(self.Launcher.launch_camera_ex_calib.value, True)
 
-                self.fnLaunch(self.Launcher.launch_detect_lane.value, True)
+                # self.fnLaunch(self.Launcher.launch_detect_lane.value, True)
                 self.fnLaunch(self.Launcher.launch_detect_sign.value, False)
                 self.fnLaunch(self.Launcher.launch_detect_construction.value, True)
 
@@ -130,7 +130,7 @@ class CoreNodeController():
 
                 self.fnLaunch(self.Launcher.launch_camera_ex_calib.value, True)
 
-                self.fnLaunch(self.Launcher.launch_detect_lane.value, True)
+                # self.fnLaunch(self.Launcher.launch_detect_lane.value, True)
                 self.fnLaunch(self.Launcher.launch_detect_sign.value, False)
                 self.fnLaunch(self.Launcher.launch_detect_construction.value, True)
 
@@ -144,7 +144,7 @@ class CoreNodeController():
 
                 self.fnLaunch(self.Launcher.launch_camera_ex_calib.value, True)
 
-                self.fnLaunch(self.Launcher.launch_detect_lane.value, True)
+                # self.fnLaunch(self.Launcher.launch_detect_lane.value, True)
                 self.fnLaunch(self.Launcher.launch_detect_sign.value, True)
                 self.fnLaunch(self.Launcher.launch_detect_construction.value, False)
 
