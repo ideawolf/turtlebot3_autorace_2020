@@ -53,6 +53,8 @@ class CoreModeDecider():
 
     def fnInitMode(self):                                                   # starts only when the program is started initially or any mission is completed
         ## 원복 해야됨
+        self.is_moving_complete = False
+
         rospy.loginfo("currentmode : construction detected")
 
         rospy.loginfo("avoid obstacle")
