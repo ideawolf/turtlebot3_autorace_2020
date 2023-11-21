@@ -51,6 +51,7 @@ class CoreModeDecider():
 
     def fnInitMode(self):                                                   # starts only when the program is started initially or any mission is completed
         ## 원복 해야됨
+        rospy.loginfo("currentmode : construction detected")
         self.current_mode = self.CurrentMode.construction.value
 
 
