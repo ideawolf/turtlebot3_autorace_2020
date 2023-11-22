@@ -74,9 +74,9 @@ class CoreNodeController():
         if self.current_mode == self.CurrentMode.lane_following.value:
             rospy.loginfo("New trigger for lane_following")
 
-            self.fnLaunch(self.Launcher.launch_camera_ex_calib.value, True)
+            # self.fnLaunch(self.Launcher.launch_camera_ex_calib.value, True)
 
-            self.fnLaunch(self.Launcher.launch_detect_lane.value, True)
+            # self.fnLaunch(self.Launcher.launch_detect_lane.value, True)
             self.fnLaunch(self.Launcher.launch_detect_traffic_light.value, False)
 
             self.fnLaunch(self.Launcher.launch_driving_lane.value, True)
@@ -92,7 +92,7 @@ class CoreNodeController():
 
                 msg_pub_traffic_light_order.data = self.StepOfTrafficLight.in_traffic_light.value
                 
-                self.fnLaunch(self.Launcher.launch_detect_lane.value, True)
+                # self.fnLaunch(self.Launcher.launch_detect_lane.value, True)
                 self.fnLaunch(self.Launcher.launch_detect_traffic_light.value, True)
                 
                 self.fnLaunch(self.Launcher.launch_driving_lane.value, False)
@@ -101,7 +101,7 @@ class CoreNodeController():
                 rospy.loginfo("Current step : in_traffic_light")
                 rospy.loginfo("Go to next step : pass_traffic_light")
 
-                self.fnLaunch(self.Launcher.launch_detect_lane.value, True)
+                # self.fnLaunch(self.Launcher.launch_detect_lane.value, True)
                 self.fnLaunch(self.Launcher.launch_detect_traffic_light.value, False)
 
                 self.fnLaunch(self.Launcher.launch_driving_lane.value, True)
