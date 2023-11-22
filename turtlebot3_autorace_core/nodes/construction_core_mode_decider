@@ -88,7 +88,7 @@ class CoreModeDecider():
         rospy.loginfo("go straight")
         msg_moving.moving_type = 4
         msg_moving.moving_value_angular = 0.0
-        msg_moving.moving_value_linear = 0.25
+        msg_moving.moving_value_linear = 0.35
         self.pub_moving.publish(msg_moving)
         while True:
             if self.is_moving_complete == True:
@@ -112,7 +112,7 @@ class CoreModeDecider():
         rospy.loginfo("go straight")
         msg_moving.moving_type = 4
         msg_moving.moving_value_angular = 0.0
-        msg_moving.moving_value_linear = 0.5
+        msg_moving.moving_value_linear = 0.35
         self.pub_moving.publish(msg_moving)
         while True:
             if self.is_moving_complete == True:
@@ -136,7 +136,7 @@ class CoreModeDecider():
         rospy.loginfo("go straight")
         msg_moving.moving_type = 4
         msg_moving.moving_value_angular = 0.0
-        msg_moving.moving_value_linear = 0.4
+        msg_moving.moving_value_linear = 0.35
         self.pub_moving.publish(msg_moving)
         while True:
             if self.is_moving_complete == True:
